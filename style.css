@@ -1,5 +1,11 @@
 /* CSS Document */
 
-
-#me{ background-image:url(me.jpg); background-repeat:no-repeat; width:300px; height:300px; margin:250px auto;}
-a{ color:#FF0000;}
+h1{ font-size:16px;}
+#me{ background-image:url(me.jpg); background-repeat:no-repeat; width:210px; height:210px; float:left;}
+#title{ float:left; width:300px; margin-top:100px; color:#CC0000; font-weight:900;}
+#title a{ color:#999999; margin-left:20px;}
+#main{ width:600px;margin:10px auto;}
+h1{ clear:both;}
+ul li{ list-style:none; font-size:6px; color:#999999;}
+ul li span{ color:#6633CC; font-size:10px;}
+ul li a{ color:#000; font-size:16px;}
