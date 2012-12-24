@@ -9,3 +9,7 @@ h1{ clear:both;}
 ul li{ list-style:none; font-size:6px; color:#999999;}
 ul li span{ color:#6633CC; font-size:10px;}
 ul li a{ color:#000; font-size:16px;}
+
+html {
+	cursor: url(img/f2e.ico),auto;
+}
