@@ -2,8 +2,8 @@
 
 h1{ font-size:16px;}
 #me{ background-image:url(me.jpg); background-repeat:no-repeat; width:210px; height:210px; float:left;
--webkit-animation:logo 2s .2s ease both;
--moz-animation:logo 2s .2s ease both;}
+-webkit-animation:logo 1s .2s ease both;
+-moz-animation:logo 1s .2s ease both;}
 @-webkit-keyframes logo{
 0%{opacity:0;
 -webkit-transform:translateY(-2000px)}
@@ -45,8 +45,9 @@ h1{ clear:both;}
 ul li{ list-style:none; font-size:6px; color:#999999;}
 ul li span{ color:#6633CC; font-size:10px;}
 ul li a{ color:#000; font-size:16px;}
-.posts,h1,p{-webkit-animation:posts 2s .2s ease both;
--moz-animation:posts 2s .2s ease both;}
+
+.posts,h1,p{-webkit-animation:posts 3s .6s ease both;
+-moz-animation:posts 3s .6s ease both;}
 @-webkit-keyframes posts{
 0%{opacity:0;
 -webkit-transform:translateX(-2000px)}
