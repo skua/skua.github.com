@@ -3,7 +3,7 @@
         // 通过origin属性判断消息来源地址
 
 		
-        if (event.origin == 'http://55u.me/ky/index.html') {
+        if (event.origin == 'http://55u.me') {
             alert(event.data);    // 弹出"I was there!"
             alert(event.source);  // 对a.com、index.html中window对象的引用
                                   // 但由于同源策略，这里event.source不可以访问window对象
