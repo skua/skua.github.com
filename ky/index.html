@@ -5,11 +5,12 @@
             alert(event.data);    // 弹出"I was there!"
             alert(event.source);  // 对a.com、index.html中window对象的引用
                                   // 但由于同源策略，这里event.source不可以访问window对象
-        }
-    }, false);
 	window.onload = function() {
     
 	document.getElementById('ck').onclick = function () {alert("fuck")}
 };
+        }
+    }, false);
+	
 </script>
 <div id ="ck">aaaaa</div>
