@@ -2,7 +2,7 @@
 if (typeof window.postMessage === “undefined”) {
 // postMessage not supported in this browser
 }
-    window.addEventListener('message', function(event){
+    window.addEventListener('message', function(event),false{
         // 通过origin属性判断消息来源地址
         if (event.origin == 'http://55u.me/ky/index.html') {
             alert(event.data);    // 弹出"I was there!"
