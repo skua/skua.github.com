@@ -7,5 +7,9 @@
                                   // 但由于同源策略，这里event.source不可以访问window对象
         }
     }, false);
+	window.onload = function() {
+    
+	document.getElementById('ck').onclick = function () {alert("fuck")}
+};
 </script>
 <div id ="ck">aaaaa</div>
