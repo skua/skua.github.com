@@ -1,24 +1,16 @@
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script type="text/javascript">
-if (typeof window.postMessage === “undefined”) {
-// postMessage not supported in this browser
-}
-    window.addEventListener('message', function(event),false{
+    window.addEventListener('message', function(event){
         // 通过origin属性判断消息来源地址
         if (event.origin == 'http://55u.me/ky/index.html') {
             alert(event.data);    // 弹出"I was there!"
             alert(event.source);  // 对a.com、index.html中window对象的引用
-                                  // 但由于同源策略，这里event.source不可以访问window对象				 
-		var ck =document.getElementById('ck').onclick = function () {alert("fuck")};
-
-
-	       
-
+                                  // 但由于同源策略，这里event.source不可以访问window对象
+	window.onload = function() {
+    
+	document.getElementById('ck').onclick = function () {alert("fuck")}
+};
         }
     }, false);
-	 $(document).ready(function(){
-								$("ck").click( function () { alert("fuck")});
-
-});
+	
 </script>
 <div id ="ck">aaaaa</div>
