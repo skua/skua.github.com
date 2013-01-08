@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>demo</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+
+
+<div id="content">
+  <div class="post">
+    <p>2012-01-20</p>
+    <ul>
+      <li><img src="img/55u.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+      <li><img src="img/pc201212140004.jpg" /></li>
+      <li><img src="img/55u1.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+    </ul>
+  </div>
+  <div class="post">
+    <p>2012-01-20</p>
+    <ul>
+      <li><img src="img/55u.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+      <li><img src="img/bg6.jpg" /></li>
+      <li><img src="img/pc201212140004.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+    </ul>
+    <ul>
+      <li><img src="img/55u.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+      <li><img src="img/pc201212140004.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+      <li><img src="img/a913a4090be4841444b52b9b1dc4d61a.jpg" /></li>
+    </ul>
+  </div>
+  <div class="post">
+    <p>2012-01-20</p>
+    <ul>
+      <li><img src="img/55u.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+      <li><img src="img/bg6.jpg" /></li>
+      <li><img src="img/55u1.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" /></li>
+    </ul>
+    <ul>
+      <li><img src="img/55u.jpg" /></li>
+      <li><img src="img/a913a4090be4841444b52b9b1dc4d61a.jpg" /></li>
+      <li><img src="img/pc201212140004.jpg" /></li>
+      <li><img src="img/55u1.jpg" /></li>
+      <li><img src="img/a67d474cd42ef1f0d72afcd4.jpg" />11111</li>
+    </ul>
+  </div>
+</div>
+<div class="side">
+  <h2 class="nextURL"> <a href="page3.html">下一页→</a> </h2>
+</div>
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+var startHref ;
+	$(".nextURL a").click(function(){
+		
+		//首先取得下一页的链接地址
+		var href=$(this).attr("href");
+		startHref = href;
+		//判断下一页的链接地址是否存在
+		if( href != undefined ){
+			
+			//如果存在的话，用ajax获取数据
+			$.ajax({
+				type:"get",
+				url:href,
+				success:function(data){
+					//将返回的数据进行处理，挑选出class是post的内容块
+					var $res=$(data).find(".post");
+	
+					$("#content").append( $res );
+					
+					//newHref获取返回的内容中的下一页的链接地址
+					var newHref=$(data).find(".nextURL a").attr("href");
+					//判断下一页地址是否存在，如果存在，替换当前页的链接地址。不存在，将当前页链接地址属性href移除，并替换内容为“下一页没有了”
+					if( newHref != undefined ){
+						$(".nextURL a").attr("href",newHref);
+
+					}
+					else
+					{
+						$(".nextURL a").html("下一页没有了").removeAttr("href")
+					}
+				}
+			})
+		}
+		
+		//返回false，使得点击进入新页面失效
+		return false;
+	})
+	
+		//首先给窗口绑定事件scroll
+$(window).bind("scroll",function(){
+// 然后判断窗口的滚动条是否接近页面底部，这里的20可以自定义
+if( $(document).scrollTop() + $(window).height() > $(document).height() - 20 ){
+if($(".nextURL a").attr('href') != startHref){
+	$(".nextURL a").trigger("click");
+}}
+})
+  
+});
+</script>
+</body>
+</html>

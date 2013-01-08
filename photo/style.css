@@ -1,0 +1,8 @@
+/* CSS Document */
+
+
+#content { width:900px;margin:0 auto;}
+.post p{ margin-left:40px; font-weight:800; }
+.post ul li { list-style:none; display:inline;}
+.post ul li img{ max-width:160px; max-height:160px; border:solid #ccc 1px; padding:1px;}
+.side{width:200px;margin:0 auto; }
