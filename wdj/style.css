@@ -1,0 +1,12 @@
+/* CSS Document */
+
+
+#content { width:960px;margin:0 auto;}
+
+.post p{ margin-left:40px; font-weight:860; }
+.post { width: 960px; clear: both;}
+.post ul { overflow: hidden;}
+.post ul li { list-style:none; float: left; margin:2px; line-height:158px; }
+.post ul li img{ max-width:160px; max-height:160px; border:solid #ccc 1px; padding:1px; vertical-align:middle;}
+.side{width:200px;margin:0 auto; }
+.none{ width: 50px; height: 168px; overflow: hidden;}
