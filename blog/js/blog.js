@@ -70,72 +70,7 @@ $(function() {
     // 转化引擎
     blog.helper.markdown = new Showdown.converter();
 
-    // 增加多说评论
-    blog.helper.addDiscuz = function (_div,file,title){
-       
-        var el = document.createElement('div');//该div不需要设置class="ds-thread"
-        el.setAttribute('data-thread-key', file);//必选参数
-        el.setAttribute('data-url', file);//必选参数
-        el.setAttribute('data-title', title);//必选参数
-        
-        el.setAttribute('data-author-key', 'hugcoday@gmail.com');//可选参数
-        DUOSHUO.EmbedThread(el);
-        _div.append(el);
-        
-         
-    }
-
-    // 评论列表
-
-    blog.helper.addDiscuzList = function(_div){
-
-        var _discuz_title = document.createElement('h3'); 
-        _discuz_title.innerHTML="最新评论";
-        _div.append(_discuz_title);
-
-        var el = document.createElement('ul'); 
-        el.setAttribute('data-num-items', "10");
-        el.setAttribute('data-excerpt-length',"70"); 
-        el.setAttribute('data-show-title', "0"); 
-
-        
-        DUOSHUO.RecentComments(el);
-        _div.append(el);
- 
-       
-         
-    }
-
-    //近期访客
-    blog.helper.addDiscuzUsers = function(_div){
-
-        var _discuz_title = document.createElement('h3'); 
-        _discuz_title.innerHTML="近期访客";
-        _div.append(_discuz_title);
-
-        var el = document.createElement('ul'); 
-        el.setAttribute('data-num-items', "10");
-        el.setAttribute('data-excerpt-length',"70"); 
-        el.setAttribute('data-show-title', "0"); 
-
-        
-        DUOSHUO.RecentVisitors(el);
-        _div.append(el);
- 
-       
-         
-    }
-
-    blog.helper.addpages = function(index,articles,_div){
-        var el = document.createElement('ul'); 
-        el.setAttribute('data-num-items', "10");
-        el.setAttribute('data-excerpt-length',"70"); 
-        el.setAttribute('data-show-title', "0"); 
-
-    }
-
-    
-    var curPageNum = 1;
+   
 
   
 

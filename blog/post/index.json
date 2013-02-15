@@ -7,7 +7,7 @@
     ],
     "articles":[
         {"title": "测试1", "file": "2013-02-14-test1", "cate":"life"},
-        {"title": "测试2", "file": "2013-02-152-test2", "cate":"other"},
+        {"title": "测试2", "file": "2013-02-15-test2", "cate":"other"},
        
     
     ]
