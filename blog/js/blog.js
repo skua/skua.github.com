@@ -70,9 +70,7 @@ $(function() {
     // 转化引擎
     blog.helper.markdown = new Showdown.converter();
 
-   
-
-  
+    
 
     //代码高亮
    blog.helper.highlight = function () {
@@ -161,9 +159,7 @@ $(function() {
 
                 this.$(".article-content").empty().append(article_view.render().el);
                  
-                //添加评论
-                blog.helper.addDiscuz(this.$(".article-content"),this.article,"");
-               
+              
               
                  
             }
@@ -181,9 +177,7 @@ $(function() {
 
             }
 
-             // 添加评论列表
-            blog.helper.addDiscuzList(this.$(".sidebar-comment"));
-            blog.helper.addDiscuzUsers(this.$(".sidebar-users"));
+            
 
             
         }

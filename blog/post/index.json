@@ -1,14 +1,13 @@
 {
     "site_name": "F2E 宅！",
-    "copyright": "F2E",
+    "copyright": "f2e",
     "cates": [
-        {"name": "tech", "text":"工作"},
-        {"name": "other", "text":"其它"}
+        {"name": "css", "text":"css"},
+        {"name": "js", "text":"js"}
     ],
     "articles":[
-        {"title": "测试1", "file": "2013-02-14-test1", "cate":"life"},
-        {"title": "测试2", "file": "2013-02-15-test2", "cate":"other"},
-       
+        {"title": "测试1", "file": "2013-02-04-1", "cate":"css"},
+        {"title": "测试2", "file": "2012-08-31-2", "cate":"js"}
     
     ]
 }
