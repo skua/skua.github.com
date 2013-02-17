@@ -149,7 +149,7 @@ $(function() {
                 this.$('.navbar-inner .nav li a[href="#!cate/' + this.cate + '"]').parent().addClass('active');
             }
 
-            /if(this.article!="index") {
+            if(this.article) {
 
                 var article_view = new blog.views.Article({
                     article: this.article
@@ -165,7 +165,7 @@ $(function() {
             }
 
 
-            if(this.article == "index") {
+           / if(this.article == "index") {
                 this.$(".article-content").empty();
                 curIndex = 0;
                 hasShowedNum = 0;
@@ -176,12 +176,9 @@ $(function() {
                 
 
             }
-            /
-            
-            if(this.article){
-                var article_view = new blog.views.Article({article:this.article});
-                this.$(".article-content").empty().append(article_view.render().el);
-            }
+
+          /  
+
             
         }
     });
