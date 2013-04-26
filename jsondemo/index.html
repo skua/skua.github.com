@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<script src="http://55u.me/wp-content/themes/Android/js/jquery.js"></script>
+ <script language="javascript">
+  
+  $().ready(function(e) {
+	  
+	  
+		var fe = function(jsonUrl,liMax){
+				
+					$.get(jsonUrl, function(json){
+									
+							
+							  if(!!json.rows){
+										fqData = json.rows;
+
+												for(var j=0;j<liMax;j++){
+//console.log(fqData[j])
+
+if(fqData[j]==undefined){break}
+												$("#aaa").append('<a>'+fqData[j].title+'</a></br>');
+												}	
+							  }
+					});
+		}
+	fe('../json/fq.json',6)
+
+  });
+
+
+</script>
+<div id="aaa"></div>
+</body>
+</html>
