@@ -1,6 +1,10 @@
 @charset "utf-8";
 
-h1{font-size:16px; float:left; width:300px; margin-top:100px; color:#CC0000; font-weight:900;
+h1{
+font-size: 24px;
+float: left;
+margin-top: 100px;
+margin-left: 200px; color:#CC0000; font-weight:900;
 -webkit-animation:title 2s .2s ease both;
 -moz-animation:title 2s .2s ease both;}
 @-webkit-keyframes title{
