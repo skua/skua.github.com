@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>json 日志 测试</title>
+<script src="http://55u.me/wp-content/themes/Android/js/jquery.js"></script>
+</head>
+
+<body>
+
+<div id="content"></div>
+
+<script language="javascript" type="application/javascript">
+
+$().ready(function(e) { 
+ 
+ 
+ 
+ 
+		var jsonUrl = "http://f2e.it/json/j.json"
+		$.getJSON(jsonUrl,function(json){
+		if(!!json){
+			var data = json
+            $("#content").html(data.post.content)
+			
+        }
+	 })			
+   
+
+ })
+</script>  
+
+</body>
+</html>
