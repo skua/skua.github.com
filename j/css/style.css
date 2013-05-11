@@ -25,7 +25,7 @@ margin-left: 200px; color:#CC0000; font-weight:900;
 
 #content{ width:600px;margin:90px auto;}
 h1{ clear:both;}
-p{color:#999;}
+p{color:#000;}
 #content,h1,p,pre{-webkit-animation:posts 3s .6s ease both;
 -moz-animation:posts 3s .6s ease both;}
 @-webkit-keyframes posts{
