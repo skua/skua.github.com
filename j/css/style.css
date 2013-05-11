@@ -23,10 +23,10 @@ margin-left: 200px; color:#CC0000; font-weight:900;
 80%{-moz-transform:translateX(10px)}
 100%{-moz-transform:translateX(0)}}
 
-#content{ width:600px;margin:10px auto;}
+#content{ width:600px;margin:90px auto;}
 h1{ clear:both;}
 p{color:#999;}
-#content,h1,p{-webkit-animation:posts 3s .6s ease both;
+#content,h1,p,pre{-webkit-animation:posts 3s .6s ease both;
 -moz-animation:posts 3s .6s ease both;}
 @-webkit-keyframes posts{
 0%{opacity:0;
@@ -43,3 +43,7 @@ p{color:#999;}
 -moz-transform:translateX(30px)}
 80%{-moz-transform:translateX(-10px)}
 100%{-moz-transform:translateX(0)}}
+#next{
+position: fixed;
+top: 200px;
+left: 250px;}
