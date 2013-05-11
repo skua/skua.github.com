@@ -49,7 +49,7 @@ window.onload = function(){
 	var ctx = canvas.getContext("2d");
 	
 	//Make the canvas occupy the full page
-	var W = window.innerWidth, H = window.innerHeight;
+	var W = 200, H = 800;
 	canvas.width = W;
 	canvas.height = H;
 	
@@ -64,15 +64,7 @@ window.onload = function(){
 	}
 	
 	//finally some mouse tracking
-	canvas.addEventListener('mousemove', track_mouse, false);
-	
-	function track_mouse(e)
-	{
-		//since the canvas = full page the position of the mouse 
-		//relative to the document will suffice
-		mouse.x = e.pageX;
-		mouse.y = e.pageY;
-	}
+
 	
 	function particle()
 	{
@@ -83,14 +75,9 @@ window.onload = function(){
 		this.speed = {x: -2.5+Math.random()*5, y: -15+Math.random()*10};
 		//location = mouse coordinates
 		//Now the flame follows the mouse coordinates
-		if(mouse.x && mouse.y)
-		{
-			this.location = {x: mouse.x, y: mouse.y};
-		}
-		else
-		{
+
 			this.location = {x: W/2, y: H/2};
-		}
+		
 		//radius range = 10-30
 		this.radius = 10+Math.random()*20;
 		//life range = 20-30
@@ -110,9 +97,9 @@ window.onload = function(){
 		//In the next frame the background is painted normally without blending to the 
 		//previous frame
 		ctx.globalCompositeOperation = "source-over";
-		ctx.fillStyle = "black";
+		ctx.fillStyle = "#fff";
 		ctx.fillRect(0, 0, W, H);
-		ctx.globalCompositeOperation = "lighter";
+		//ctx.globalCompositeOperation = "lighter";
 		
 		for(var i = 0; i < particles.length; i++)
 		{
