@@ -7,20 +7,18 @@
 </head>
 
 <body>
-
+<h1></h1>
 <div id="content"></div>
 
 <script language="javascript" type="application/javascript">
 
 $().ready(function(e) { 
- 
- 
- 
- 
+
 		var jsonUrl = "http://f2e.it/json/j.json"
 		$.getJSON(jsonUrl,function(json){
 		if(!!json){
 			var data = json
+			$("h1").html(data.post.title)
             $("#content").html(data.post.content)
 			
         }
