@@ -9,7 +9,7 @@
 <body>
 <h1></h1>
 <div id="content"></div>
-<div id="next">next</div>
+<div id="next" data-id="0">next</div>
 <script language="javascript">
 
 $().ready(function(e) { 
@@ -20,11 +20,11 @@ $().ready(function(e) {
 				var data = json
 				$("h1").html(data.post.title);
 				$("#content").html(data.post.content);
-				$("#next").html(data.next);
+				$("#next").attr("data-id",data.next)
 			}
 	    })			
         $("#next").click(function(){
-		var nextpage = $("#next").text();
+		var nextpage = $("#next").attr("data-id");
 		var ap1 = "http://f2e.it/json/j"
 		var ap2 = ".json"
 		var jsonUrl = ap1+nextpage+ap2
@@ -33,7 +33,7 @@ $().ready(function(e) {
 				var data = json
 				$("h1").html(data.post.title);
 				$("#content").html(data.post.content);
-				$("#next").html(data.next);
+				$("#next").attr("data-id",data.next);
 			}
 	    })
 		
