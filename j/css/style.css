@@ -3,6 +3,25 @@
 /* CSS Document */
 
 h1{ font-size:16px;}
+#me{ background-image:url(http://f2e.it/me.jpg); background-repeat:no-repeat; width:210px; height:210px; float:left;
+-webkit-animation:logo 1s .2s ease both;
+-moz-animation:logo 1s .2s ease both;}
+@-webkit-keyframes logo{
+0%{opacity:0;
+-webkit-transform:translateY(-2000px)}
+60%{opacity:1;
+-webkit-transform:translateY(30px)}
+80%{-webkit-transform:translateY(-10px)}
+100%{-webkit-transform:translateY(0)}
+}
+@-moz-keyframes logo{
+0%{opacity:0;
+-moz-transform:translateY(-2000px)}
+60%{opacity:1;
+-moz-transform:translateY(30px)}
+80%{-moz-transform:translateY(-10px)}
+100%{-moz-transform:translateY(0)}
+}
 
 #title{ float:left; width:300px; margin-top:100px; color:#CC0000; font-weight:900;
 -webkit-animation:title 2s .2s ease both;
