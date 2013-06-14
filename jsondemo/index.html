@@ -10,7 +10,8 @@
 </head>
 
 <body>
-<script src="http://55u.me/wp-content/themes/Android/js/jquery.js"></script>
+<script src="http://55u.me/wp-content/themes/Android/js/jquery.js"></script>
+
  <script language="javascript">
   
   $().ready(function(e) {
@@ -18,18 +19,13 @@
 	  
 		var fe = function(jsonUrl,liMax){
 				
-					$.get(jsonUrl, function(json){
+					$.get(jsonUrl + "&callbak=?", function(json){
 									
 							
-							  if(!!json.rows){
-										fqData = json.rows;
+							  if(!!json){
+										console.log(json)
 
-												for(var j=0;j<liMax;j++){
-//console.log(fqData[j])
-
-if(fqData[j]==undefined){break}
-												$("#content").append('<a>'+fqData[j].title+'</a></br>');
-												}	
+	
 							  }
 					});
 		}
