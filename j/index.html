@@ -52,7 +52,7 @@ $().ready(function(e) {
 		
 		$.ajax({
         url: 'http://55u.me/api/get_page_index/?dev='+page_id+'&callback=?',
-        dataType: 'jsonp',
+        dataType: 'json',
         type: 'GET',
         success: function(data) {
                alert("Title of page retrieved: "+data.status);
