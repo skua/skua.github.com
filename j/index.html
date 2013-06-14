@@ -57,7 +57,12 @@ $().ready(function(e) {
         success: function(data) {
                alert("Title of page retrieved: "+data.status);
                console.log(JSON.stringify(data));
-        }
+        },error:function(a,b,c){
+			console.log(a);
+			console.log(b);
+			console.log(c);
+		}
+		
        });
 		
 		
