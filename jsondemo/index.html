@@ -19,7 +19,7 @@
 	  
 		var fe = function(jsonUrl,liMax){
 				
-					$.get(jsonUrl + "&callbak=?", function(json){
+					$.get(jsonUrl, function(json){
 									
 							
 							  if(!!json){
@@ -29,7 +29,7 @@
 							  }
 					});
 		}
-	fe('http://55u.me/api/get_page_index/?dev=1?',6)
+	fe('http://55u.me/api/get_page_index/?dev=1&callbak=?',6)
 
   });
 
