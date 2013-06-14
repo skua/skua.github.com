@@ -48,28 +48,23 @@ $().ready(function(e) {
 		
 		})*/
 		
+		var page_id = 1;
+		
+		$.ajax({
+        url: 'http://55u.me/api/get_page_index/?dev='+page_id+'&callback=?',
+        dataType: 'jsonp',
+        type: 'GET',
+        success: function(data) {
+               alert("Title of page retrieved: "+data.status);
+               console.log(JSON.stringify(data));
+        }
+       });
 		
 		
-		var fe = function(jsonUrl){
 		
-			$.getJSON(jsonUrl, function(json){
-							
-					
-					  if(!!json){
-						  
-						  
-//						        json  = $.parseJSON(json)
-						
-//								var data = json.pages;
-//								$("h1").html(data[0].title);
-//				                $("#content").html(data[0].content);
-	
-	
-					  }
-			});
-	   }
-	fe('http://55u.me/api/get_page_index/?dev=1&callbak=?')
 		
+		
+
 
  })
 </script>
