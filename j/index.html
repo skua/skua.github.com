@@ -53,7 +53,7 @@ $().ready(function(e) {
 		$.ajax({
         url: 'http://55u.me/api/get_page_index/?dev='+page_id+'&callback=?',
         dataType: 'json',
-        type: 'GET',
+        type: 'POST',
         success: function(data) {
                alert("Title of page retrieved: "+data.status);
                console.log(JSON.stringify(data));
@@ -65,7 +65,7 @@ $().ready(function(e) {
 		
 		
 
-
+ 
  })
 </script>
 </body>
