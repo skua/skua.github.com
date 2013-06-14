@@ -51,7 +51,7 @@ $().ready(function(e) {
 		var page_id = 1;
 		
 		$.ajax({
-        url: 'http://55u.me/api/get_page_index/?dev='+page_id+'&callback=?',
+        url: 'http://api.douban.com/book/subject/1220562?alt=json&callback=?',
         dataType: 'json',
         type: 'POST',
         success: function(data) {
