@@ -5,16 +5,8 @@
 
 		
         if (event.origin == 'http://55u.me') {
-            //alert(event.data);    // 弹出"I was there!"
-			
-			JSON.stringify(data);
-			
-			console.log(data);
-			alert(data.status);
-			
-			
-			
-            //alert(event.source);  // 对a.com、index.html中window对象的引用
+            alert(event.data);    // 弹出"I was there!"
+            alert(event.source);  // 对a.com、index.html中window对象的引用
                                   // 但由于同源策略，这里event.source不可以访问window对象
 	        $(function(){$("#ck").click( function() {alert("跨域弹窗！");});});
         }
