@@ -48,22 +48,32 @@ $().ready(function(e) {
 		
 		})*/
 		
-		var page_id = 1;
-		
-		$.ajax({
-        url: 'http://api.douban.com/book/subject/1220562?alt=json&callback=?',
-        dataType: 'json',
-        type: 'POST',
-        success: function(data) {
-               alert("Title of page retrieved: "+data.status);
-               console.log(JSON.stringify(data));
-        },error:function(a,b,c){
-			console.log(a);
-			console.log(b);
-			console.log(c);
-		}
-		
-       });
+//		var page_id = 1;
+//		
+//		$.ajax({
+//        url: 'http://api.douban.com/book/subject/1220562?alt=json&callback=?',
+//        dataType: 'json',
+//        type: 'POST',
+//        success: function(data) {
+//               alert("Title of page retrieved: "+data.status);
+//               console.log(JSON.stringify(data));
+//        },error:function(a,b,c){
+//			console.log(a);
+//			console.log(b);
+//			console.log(c);
+//		}
+//		
+//       });
+
+
+
+									$.ajax({
+									url:'http://api.douban.com/book/subject/1220562?alt=json',
+									
+									success:function(data){},
+									error:function(a,b,c){},
+									dataType :'jsonp',
+									jsonpCallback:'success_jsonpCallback'});
 		
 		
 		
