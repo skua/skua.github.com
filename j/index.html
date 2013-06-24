@@ -52,18 +52,21 @@ $().ready(function(e) {
 
 
 
-									$.ajax({
-									url:'http://api.douban.com/book/subject/1220562?alt=json',
-									
-									success:function(json){
-	
-			                        },
-									error:function(a,b,c){},
-									dataType :'jsonp',
-									jsonpCallback:'success_jsonpCallback'});
+
 		
 		
-		
+											$.ajax({
+												url:'http://api.douban.com/book/subject/1220562?alt=json',
+												data:params,
+												success:function(json){
+													
+												if(!!json){	}
+												                      },
+												error:function(a,b,c){},
+												dataType :'jsonp',
+												jsonpCallback:'success_jsonpCallback'});
+											
+											
 		
 		
 
