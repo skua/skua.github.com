@@ -22,58 +22,20 @@
 
 $().ready(function(e) { 
 
-/*		var jsonUrl = "http://f2e.it/json/j1.json"
-		$.getJSON(jsonUrl,function(json){
-			if(!!json){
-				var data = json
-				$("h1").html(data.post.title);
-				$("#content").html(data.post.content);
-				$("#next").attr("data-id",data.next)
-			}
-	    })			
-        $("#next").click(function(){
-		var nextpage = $("#next").attr("data-id");
-		var ap1 = "http://f2e.it/json/j"
-		var ap2 = ".json"
-		var jsonUrl = ap1+nextpage+ap2
-		$.getJSON(jsonUrl,function(json){
-			if(!!json){
-				var data = json
-				$("h1").html(data.post.title);
-				$("#content").html(data.post.content);
-				$("#next").attr("data-id",data.next);
-			}
-	    })
-		
-		
-		})*/
-		
+				    $.ajax({
+					  url:'http://55u.me/ky/jsonp.php',
+					  
+					  success:function(json){
+						  
+					  if(!!json){
+					  $("h1").html(json.title);
+					  //console.log(json.json);
+					  }
+											},
+					  error:function(a,b,c){},
+					  dataType :'jsonp',
+					  jsonpCallback:'callback'});
 
-
-
-
-
-		
-		
-											$.ajax({
-												url:'http://55u.me/ky/jsonp.php',
-												
-												success:function(json){
-													
-												if(!!json){
-												$("h1").html(json.title);
-												//console.log(json.json);
-												}
-												                      },
-												error:function(a,b,c){},
-												dataType :'jsonp',
-												jsonpCallback:'callback'});
-											
-											
-		
-		
-
- 
  })
 </script>
 </body>
