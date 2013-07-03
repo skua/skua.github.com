@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>baidu map https</title>
+<script type="text/javascript" src="http://f2e.it/jq.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+<style>
+
+.dealerlist_page_right {
+	width: 560px;
+	height: 439px;
+}
+</style>
+</head>
+<body>
+<ul>
+<li>北京</li>
+<li>哈尔滨</li>
+<li>牡丹江</li>
+
+
+
+</ul>
+<div class="dealerlist_page_right">
+  <iframe name="map_api" id="map_api" src="http://f2e.it/baidumap/map.html" frameborder="0" scrolling="no" height="100%" width="100%" noresize="noresize"> </iframe>
+</div>
+
+
+<script type="text/javascript">
+
+$().ready(function(e) {
+	
+	
+	$("ul").delegate('li','click',function(){
+	
+
+             var where = $(this).text();
+
+   
+             $('#map_api').attr("src","http://f2e.it/baidumap/map.html?"+where);
+	});
+
+ });
+
+          
+
+ </script>
+</body>
+</html>
