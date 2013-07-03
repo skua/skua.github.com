@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>禁止中文表单提交</title>
+<script language="javascript">
+function check(){
+for(i=0;i<document.getElementsByName("rusername")[0].value.length;i++){
+	var c = document.getElementsByName("rusername")[0].value.substr(i,1);
+	var ts = escape(c);
+		if(ts.substring(0,2) == "%u"){
+		alert("请不要提交中文字符!");
+		document.getElementsByName("rusername")[0].value = "";
+		document.getElementsByName("rusername")[0].focus();
+		}
+	}
+}
+</script>
+</head>
+<body>
+<input type="text" name="rusername" >
+<input type="button" name="button" onClick="check()" value="提 交">
+</body>
+</html>
