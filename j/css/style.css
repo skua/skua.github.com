@@ -1,8 +1,21 @@
 @charset "utf-8";
 
 /* CSS Document */
-
-h1{ font-size:16px;}
+a:link {
+	color: #999;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #666;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+h1{ font-size:16px; }
 #me{ background-image:url(http://f2e.it/me.jpg); background-repeat:no-repeat; width:210px; height:210px; float:left;
 -webkit-animation:logo 1s .2s ease both;
 -moz-animation:logo 1s .2s ease both;}
@@ -42,7 +55,7 @@ h1{ font-size:16px;}
 80%{-moz-transform:translateX(10px)}
 100%{-moz-transform:translateX(0)}}
 #title a{ color:#999999; margin-left:20px;}
-#main{ width:600px;margin:10px auto;}
+#main{ width:1000px;margin:10px auto;}
 h1{ clear:both;}
 ul li{ list-style:none; font-size:6px; color:#999999;}
 ul li span{ color:#6633CC; font-size:10px;}
@@ -65,5 +78,10 @@ p{color:#000;}
 -moz-transform:translateX(30px)}
 80%{-moz-transform:translateX(-10px)}
 100%{-moz-transform:translateX(0)}}
-#next{
-color:#999;}
+.posts{ padding:20px; border-bottom:#eee dotted 4px;width:910px;clear:both;}
+.post_img { background-color:#fff;width:900px;border-radius: 8px;}
+.post_title { margin-bottom:20px;font-size:14px;}
+.post_img img{ width:900px;border-radius: 8px;}
+.post_info { margin-bottom:40px;font-size:14px;}
+.post_info p{width:900px; color:#999;font-size:14px;}
+.post_custom{width:900px; color:#999; font-size:14px;}
