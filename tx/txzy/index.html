@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" src="http://f2e.it/jq.js"></script>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.footer {
+	width: 100%
+}
+.footer .footer_up {
+	width: 100%;
+	height: 200px;
+	background-color: #333;
+}
+.footer .footer_up #foot_menu {
+	width: 980px;
+	height: 44px;
+	margin: 0px auto;
+	padding-top: 40px;
+}
+.footer .footer_up #foot_menu p.left {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+	float: left;
+	width: 500px;
+	padding: 4px 0px 4px 0px;
+}
+.footer .footer_up #foot_menu p.right {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+	float: right;
+	width: 190px;
+	padding: 4px 0px 4px 0px;
+}
+.footer .footer_up #foot_menu p.right a {
+	width: 26px;
+	height: 26px;
+	display: block;
+	background-image: url(share.jpg);
+	margin: 2px;
+}
+.footer .footer_up #foot_menu p.right a.s_share {
+	float: right;
+	background-image: none;
+	width: 50px;
+	padding: 4px 0px 4px 4px;
+}
+.footer .footer_up #foot_menu p.right a.q_wb {
+	float: right;
+	background-position: 116px -2px;
+}
+.footer .footer_up #foot_menu p.right a.q_zone {
+	float: right;
+	background-position: 88px -2px;
+}
+.footer .footer_up #foot_menu p.right a.q_qq {
+	float: right;
+	background-position: 60px -2px;
+}
+.footer .footer_up #foot_menu p.right a.s_wb {
+	float: right;
+	background-position: 31px -2px;
+}
+.footer .footer_up #foot_menu .code_info {
+	clear: both;
+	width: 180px;
+	height: 90px;
+	float: right;
+}
+.footer .footer_up #foot_menu .code_info .info {
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding: 2px;
+}
+.footer .footer_up #foot_menu .code_info p {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 2px;
+}
+.footer .footer_up #foot_menu .code_info p.margin_top_20 {
+	float: left;
+	width: 80px;
+	margin-top: 40px;
+}
+.footer .footer_up #foot_menu .code_info img {
+	width: 80px;
+	height: 80px;
+	float: right;
+	padding: 2px;
+}
+.footer .footer_up #foot_menu a {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+}
+.footer .footer_down {
+	width: 100%;
+	height: 26px;
+	background-color: #2d2d2d;
+}
+.footer .footer_down #copyright {
+	width: 980px;
+	margin: 0px auto;
+	color: #505050;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 3px;
+}
+/*foot结束*/
+.content_tab {
+	/*width: 1360px;*/
+	width: 100%;
+	/*height: 296px;*/
+	margin: 0px auto;
+	background-image: url(tab_bg.jpg);
+	background-repeat: repeat-x;
+}
+#menu_tab {
+	width: 730px;
+	height: 200px;
+	margin: 0px auto;
+	padding-top: 15px;
+}
+#menu_tab ul {
+	width: 730px;
+	height: 200px;
+}
+#menu_tab ul li {
+	width: 168px;
+	height: 194px;
+	list-style: none;
+	float: left;
+}
+#menu_tab ul li#table {
+	background-image: url(tab_bg_1_1.jpg);
+	margin-left: 25px;
+}
+#menu_tab ul li#table.hover {
+	background-image: url(tab_bg_1.jpg);
+	margin-left: 25px;
+}
+#menu_tab ul li#source {
+	background-image: url(tab_bg_2_2.jpg);
+	margin-left: 96px;
+}
+#menu_tab ul li#source.hover {
+	background-image: url(tab_bg_2.jpg);
+	margin-left: 96px;
+}
+#menu_tab ul li#data {
+	background-image: url(tab_bg_3_3.jpg);
+	margin-left: 96px;
+}
+#menu_tab ul li#data.hover {
+	background-image: url(tab_bg_3.jpg);
+	margin-left: 96px;
+}
+#tab_img {
+	width: 1000px;
+	margin: 0px auto;
+	padding: 20px 20px 40px 20px;
+}
+#tab_img img {
+	display: none;
+}
+#work_share {
+	/*width: 1360px;*/
+	width: 100%;
+	height: 78px;
+	background-image: url(work_share_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+#work_share_menu {
+	width: 878px;
+	height: 72px;
+	margin: 0px auto;
+}
+#work_share_menu li {
+	height: 72px;
+	list-style: none;
+}
+#work_share_menu li a {
+	height: 72px;
+	display: block;
+}
+#work_share_menu #menu_title {
+	float: left;
+	width: 116px;
+}
+#work_share_menu #menu_title a {
+	background-image: url(work_share_menu.jpg);
+	background-position: 0px 0px;
+	width: 116px;
+}
+#work_share_menu #menu_traffic {
+	float: right;
+	width: 138px;
+}
+#work_share_menu #menu_traffic a {
+	background-image: url(work_share_menu.jpg);
+	background-position: -183px 0px;
+	width: 138px;
+}
+#work_share_menu #menu_daily {
+	float: right;
+	width: 138px;
+}
+#work_share_menu #menu_daily a {
+	background-image: url(work_share_menu.jpg);
+	background-position: -320px 0px;
+	width: 138px;
+}
+#work_share_menu #menu_it {
+	float: right;
+	width: 138px;
+}
+#work_share_menu #menu_it a {
+	background-image: url(work_share_menu.jpg);
+	background-position: -458px 0px;
+	width: 138px;
+}
+#work_share_menu #menu_medicine {
+	float: right;
+	width: 138px;
+}
+#work_share_menu #menu_medicine {
+	background-image: url(work_share_menu.jpg);
+	background-position: -594px 0px;
+	width: 138px;
+}
+#work_share_menu #menu_food {
+	float: right;
+	width: 138px;
+	margin-right: 10px;
+}
+#work_share_menu #menu_food a {
+	background-image: url(work_share_menu.jpg);
+	background-position: -738px 0px;
+	width: 138px;
+}
+#top_pic {
+	width: 1000px;
+	height: 500px;
+	margin: 0px auto;
+	background-color: #ccc;
+	overflow: hidden;
+}
+#top_pic .homepage_intro_player_control {
+	/*background-color: #ccc;*/
+	width: 120px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	margin-left: -60px;
+	margin-top: -50px;
+}
+#top_pic .homepage_intro_player_control a{ width:20px; height:20px; display:block; background-image:url(point.png); background-position:0px 0px; float:left; padding:2px;}
+
+
+#top_pic .homepage_intro_player_control a.current{background-image:url(point.png); background-position:20px 0px;}
+
+#header_menu {
+	height: 50px;
+	background-color: #333;
+	width: 100%;
+}
+#header_menu_box {
+	width: 980px;
+	height: 46px;
+	margin: 0px auto;
+	padding: 0px 10px 2px 10px;
+}
+#header_menu_box .header_menu_list {
+	width: 580px;
+	float: left;
+}
+#header_menu_box .header_menu_logo {
+	width: 180px;
+	float: right;
+	height: 40px;
+	padding: 8px 0px 0px 0px;
+}
+#header_menu_box ul li {
+	list-style: none;
+	float: left;
+}
+#header_menu_box ul li.qq_v {
+	margin-left: 26px;
+}
+#header_menu_box .header_menu_logo .qq_mind a {
+	width: 60px;
+	height: 34px;
+	display: block;
+	background-image: url(right_logo.jpg);
+	background-position: 0px 0px;
+}
+#header_menu_box .header_menu_logo .qq_v a {
+	width: 80px;
+	height: 30px;
+	display: block;
+	background-image: url(right_logo.jpg);
+	background-position: 80px 0px;
+}
+#header_menu_box ul.header_menu_list li a {
+	display: block;
+	background-image: url(head_menu.jpg);
+	height: 50px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_1 a {
+	background-position: 0px 0px;
+	width: 130px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_2 a {
+	background-position: -130px 0px;
+	width: 108px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_3 a {
+	background-position: -238px 0px;
+	width: 124px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_4 a {
+	background-position: -362px 0px;
+	width: 136px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_1 a:hover {
+	background-position: 0px 50px;
+	width: 130px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_2 a:hover {
+	background-position: -130px 50px;
+	width: 108px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_3 a:hover {
+	background-position: -238px 50px;
+	width: 124px;
+}
+#header_menu_box ul.header_menu_list li.menu_list_4 a:hover {
+	background-position: -362px 50px;
+	width: 136px;
+}
+</style>
+</head>
+<body><!---->
+<div id="header_menu">
+  <div id="header_menu_box">
+    <ul class="header_menu_list">
+      <li class="menu_list_1"><a href="#"></a></li>
+      <li class="menu_list_2"><a href="#"></a></li>
+      <li class="menu_list_3"><a href="anli.html"></a></li>
+      <li class="menu_list_4"><a href="#"></a></li>
+    </ul>
+    <ul class="header_menu_logo">
+      <li class="qq_mind"><a href="#"></a></li>
+      <li class="qq_v"><a href="#"></a></li>
+    </ul>
+  </div>
+</div>
+<div id="top_pic">
+  <div class="homepage_intro">
+    <div class="homepage_intro_player"> <a href="javascript:;" style="display: block;"> <img src="pic_1.jpg"></a> <a href="javascript:;" style="display: none;"> <img src="pic_2.jpg"></a> <a href="javascript:;" style="display: none;"> <img src="pic_3.jpg"></a> <a href="javascript:;" style="display: none;"> <img src="pic_4.jpg"></a> <a href="javascript:;" style="display: none;"> <img src="pic_5.jpg"></a> </div>
+    <div class="homepage_intro_player_control"> <a href="javascript:;" class="current"></a> <a href="javascript:;" class=""></a> <a href="javascript:;" class=""></a> <a href="javascript:;" class=""></a> <a href="javascript:;" class=""></a> </div>
+  </div>
+</div>
+<div class="content_tab">
+  <div id="work_share">
+    <div id="work_share_menu">
+      <ul>
+        <li id="menu_title"><a href="#"></a></li>
+        <li id="menu_food"><a href="#"></a></li>
+        <li id="menu_medicine"><a href="#"></a></li>
+        <li id="menu_it"><a href="#"></a></li>
+        <li id="menu_daily"><a href="#"></a></li>
+        <li id="menu_traffic"><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="menu_tab">
+    <ul>
+      <li id="table" class="hover"></li>
+      <li id="source"></li>
+      <li id="data"></li>
+    </ul>
+  </div>
+  <div id="tab_img"> <img src="tab_bg_1_pic.jpg" /> <img src="tab_bg_2_pic.jpg" /> <img src="tab_bg_3_pic.jpg" /> </div>
+</div>
+<div class="footer">
+  <div class="footer_up">
+    <div id="foot_menu">
+      <p class="left"><a href="#">腾讯智慧</a>&nbsp;|&nbsp;<a href="#">关于腾讯</a>&nbsp;|&nbsp;<a href="#">服务协议</a>&nbsp;|&nbsp;<a href="#">隐私权保护</a>&nbsp;|&nbsp;<a href="#">开放平台</a>&nbsp;|&nbsp;<a href="#">网站导航</a>&nbsp;|&nbsp;<a href="#">版权所有</a></p>
+      <p class="right"><a href="#" class="s_wb"></a><a href="#" class="q_qq"></a><a href="#" class="q_zone"></a><a href="#" class="q_wb"></a><a class="s_share">分享到：</a></p>
+      <p class="left"><a href="#">京ICP备11010962号</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">京公网安备110105003042</a></p>
+      <div class="code_info">
+        <div class="info">
+          <p class="margin_top_20">&nbsp;&nbsp;扫描二维码</p>
+          <p>关注腾讯智慧</p>
+        </div>
+        <img src="2code.jpg" /></div>
+    </div>
+  </div>
+  <div class="footer_down">
+    <div id="copyright">Copyright © 1998 - 2013 Tencent. All Rights Reserved</div>
+  </div>
+</div>
+<script language="javascript">
+$(document).ready(function(e) {
+	
+	$("#menu_tab li").mouseover(function(){
+		$("#menu_tab li").removeClass("hover");
+		$("#tab_img img").hide();
+		$("#tab_img img").eq($(this).index()).show();
+		$(this).addClass("hover");
+		});
+	$("#menu_tab li").eq(0).mouseover();	    
+});
+</script> 
+<script language="javascript">
+$(document).ready(function(e) {
+    		$('.homepage_intro_player_control a').bind('click',function(){
+			if(!$(this).hasClass('current')){
+				var $a = $('.homepage_intro_player_control a');
+				var f = $a.index($a.filter('.current'));
+				var t = $a.index(this);
+				$a.removeClass('current');
+				$(this).addClass('current');
+				$('img',$a).attr("src","img/arrow_gray.jpg") ; 
+				$(this).children("img").attr("src","img/arrow_black.jpg");
+				var $text = $('.homepage_intro_title');
+				var $img = $(".homepage_intro_player a");
+				var $info = $(".homepage_intro_player .pic_info");
+				$text.hide();
+				$text.eq(t).show();
+				$img.eq(f).stop(true,true).fadeOut(500);
+				
+				$img.eq(t).stop(true,true).fadeIn(500);
+				
+				
+				if(!!_h_timer)clearTimeout(_h_timer);
+				_h_timer = setTimeout(function(){_h_timerfunc();},5000);
+			}
+		}).eq(0).addClass('current');
+		$(".homepage_intro_player").bind('mouseenter',function(){
+			if(!!_h_timer)clearTimeout(_h_timer);
+		}).bind('mouseleave',function(){
+			if(!!_h_timer)clearTimeout(_h_timer);
+			_h_timer = setTimeout(function(){_h_timerfunc();},5000);
+		});
+		var _h_timer = null,_h_timerfunc = function(){
+			var $a = $('.homepage_intro_player_control a');
+			var f = $a.index($a.filter('.current'));
+			var t = f+1>=$a.size()?0:f+1;
+			$a.eq(t).trigger('click');
+		}
+		_h_timer = setTimeout(function(){_h_timerfunc();},8000);
+});
+</script>
+</body>
+</html>

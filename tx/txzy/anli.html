@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#header {
+	width: 100%;
+	height: 68px;
+	background-color: #333333;
+}
+#left_menu {
+	float: left;
+	margin-left: 50px;
+	width: 100px;
+	height: 68px;
+	
+}
+#left_menu a{width: 100px;
+	height: 68px;
+	background-image:url(home_menu.jpg); background-repeat:no-repeat;
+	display:block;}
+#right_menu {
+	float: right;
+	height: 68px;
+	margin-right: 100px;
+	width: 680px;
+}
+#right_menu ul li {
+	float: left;
+	list-style: none;
+	height: 68px;
+}
+#right_menu #menu_all {
+}
+#right_menu #menu_traffic {
+}
+#right_menu #menu_daily {
+}
+#right_menu #menu_it {
+}
+#right_menu #menu_medicine {
+}
+#right_menu #menu_food {
+}
+#right_menu li a{ height:68px; display:block;}
+#right_menu #menu_all a {
+	background-image:url(left_menu.jpg);
+	background-position: 0px 68px;
+	width: 106px;
+}
+#right_menu #menu_traffic a {
+	background-image:url(left_menu.jpg);
+	background-position: -98px 68px;
+	width: 106px;
+}
+#right_menu #menu_daily a {
+		background-image:url(left_menu.jpg);
+	background-position: -196px 68px;
+	width: 106px;
+}
+#right_menu #menu_it a {
+			background-image:url(left_menu.jpg);
+	background-position: -320px 68px;
+	width: 106px;
+}
+#right_menu #menu_medicine a {
+		background-image:url(left_menu.jpg);
+	background-position: -438px 68px;
+	width: 106px;
+}
+#right_menu #menu_food a {
+			background-image:url(left_menu.jpg);
+	background-position: -558px 68px;
+	width: 106px;
+}
+#right_menu #menu_all a:hover {
+	background-image:url(left_menu.jpg);
+	background-position: 0px 0px;
+	width: 106px;
+}
+#right_menu #menu_traffic a:hover {
+	background-image:url(left_menu.jpg);
+	background-position: -98px 0px;
+	width: 106px;
+}
+#right_menu #menu_daily a:hover {
+		background-image:url(left_menu.jpg);
+	background-position: -196px 0px;
+	width: 106px;
+}
+#right_menu #menu_it a:hover {
+			background-image:url(left_menu.jpg);
+	background-position: -320px 0px;
+	width: 106px;
+}
+#right_menu #menu_medicine a:hover {
+		background-image:url(left_menu.jpg);
+	background-position: -438px 0px;
+	width: 106px;
+}
+#right_menu #menu_food a:hover {
+			background-image:url(left_menu.jpg);
+	background-position: -558px 0px;
+	width: 106px;
+}
+#content_out {
+	background-color: #f8f8f8;
+	width: 100%;
+	padding-top: 20px;
+}
+#content_title {
+	width: 930px;
+	background-image: url(title.jpg);
+	margin: 0px auto;
+	height: 46px;
+	margin-bottom: 30px;
+	margin-top: 60px;
+}
+#content_list {
+	width: 930px;
+	background-image: url(bg.jpg);
+	background-repeat: repeat-y;
+	margin: 0px auto;
+}
+#list {
+	width: 790px;
+	margin: 0px auto;
+	padding-bottom: 60px;
+}
+#list ul li {
+	width: 786px;
+	height: 308px;
+	list-style: none;
+	padding-top: 20px;
+	border-bottom: 1px #d1d1d1 solid;
+}
+#list ul li .info_img {
+	width: 480px;
+	height: 258px;
+	padding-top: 24px;
+	float: left;
+}
+#list ul li .info_img img {
+	padding: 6px;
+	background-color: #ededed;
+}
+#list ul li .info_content {
+	width: 280px;
+	height: 258px;
+	padding-top: 24px;
+	float: right;
+}
+#list ul li .info_content .content_top {
+	height: 200px;
+	width: 270px;
+}
+#list ul li .info_content .content_top h2 {
+	padding: 4px;
+	color: #bfbfbf;
+	font-size: 18px;
+}
+#list ul li .info_content .content_top p {
+	font-size: 12px;
+	color: #bfbfbf;
+	padding: 2px;
+	width: 260px;
+}
+#list ul li .info_content .content_bot {
+	height: 50px;
+	width: 270px;
+}
+#list ul li .info_content .content_bot p {
+	font-size: 12px;
+	color: #bfbfbf;
+	padding: 2px;
+	width: 260px;
+}
+/*foot 开始*/
+
+
+.footer {
+	width: 100%
+}
+.footer .footer_up {
+	width: 100%;
+	height: 200px;
+	background-color: #333;
+}
+.footer .footer_up #foot_menu {
+	width: 980px;
+	height: 44px;
+	margin: 0px auto;
+	padding-top: 40px;
+}
+.footer .footer_up #foot_menu p.left {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+	float: left;
+	width: 500px;
+	padding: 4px 0px 4px 0px;
+}
+.footer .footer_up #foot_menu p.right {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+	float: right;
+	width: 190px;
+	padding: 4px 0px 4px 0px;
+}
+.footer .footer_up #foot_menu p.right a {
+	width: 26px;
+	height: 26px;
+	display: block;
+	background-image: url(share.jpg);
+	margin: 2px;
+}
+.footer .footer_up #foot_menu p.right a.s_share {
+	float: right;
+	background-image: none;
+	width: 50px;
+	padding: 4px 0px 4px 4px;
+}
+.footer .footer_up #foot_menu p.right a.q_wb {
+	float: right;
+	background-position: 116px -2px;
+}
+.footer .footer_up #foot_menu p.right a.q_zone {
+	float: right;
+	background-position: 88px -2px;
+}
+.footer .footer_up #foot_menu p.right a.q_qq {
+	float: right;
+	background-position: 60px -2px;
+}
+.footer .footer_up #foot_menu p.right a.s_wb {
+	float: right;
+	background-position: 31px -2px;
+}
+.footer .footer_up #foot_menu .code_info {
+	clear: both;
+	width: 180px;
+	height: 90px;
+	float: right;
+}
+.footer .footer_up #foot_menu .code_info .info {
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding: 2px;
+}
+.footer .footer_up #foot_menu .code_info p {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 2px;
+}
+.footer .footer_up #foot_menu .code_info p.margin_top_20 {
+	float: left;
+	width: 80px;
+	margin-top: 40px;
+}
+.footer .footer_up #foot_menu .code_info img {
+	width: 80px;
+	height: 80px;
+	float: right;
+	padding: 2px;
+}
+.footer .footer_up #foot_menu a {
+	text-decoration: none;
+	color: #9a9a9a;
+	font-size: 12px;
+	line-height: 18px;
+}
+.footer .footer_down {
+	width: 100%;
+	height: 26px;
+	background-color: #2d2d2d;
+}
+.footer .footer_down #copyright {
+	width: 980px;
+	margin: 0px auto;
+	color: #505050;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 3px;
+}
+/*foot结束*/
+</style>
+</head>
+<script language="javascript" src="jquery-1.7.1.min.js"></script>
+<body>
+<div id="header">
+  <div id="left_menu"><a href="index.html"></a></div>
+  <div id="right_menu">
+    <ul>
+      <li id="menu_all"><a href="#"></a></li>
+      <li id="menu_traffic"><a href="#"></a></li>
+      <li id="menu_daily"><a href="#"></a></li>
+      <li id="menu_it"><a href="#"></a></li>
+      <li id="menu_medicine"><a href="#"></a></li>
+      <li id="menu_food"><a href="#"></a></li>
+    </ul>
+  </div>
+</div>
+<div id="content_out">
+  <div id="content_title"></div>
+  <div id="content_list">
+    <div id="list" data-id="3">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer_up">
+    <div id="foot_menu">
+      <p class="left"><a href="#">腾讯智慧</a>&nbsp;|&nbsp;<a href="#">关于腾讯</a>&nbsp;|&nbsp;<a href="#">服务协议</a>&nbsp;|&nbsp;<a href="#">隐私权保护</a>&nbsp;|&nbsp;<a href="#">开放平台</a>&nbsp;|&nbsp;<a href="#">网站导航</a>&nbsp;|&nbsp;<a href="#">版权所有</a></p>
+      <p class="right"><a href="#" class="s_wb"></a><a href="#" class="q_qq"></a><a href="#" class="q_zone"></a><a href="#" class="q_wb"></a><a class="s_share">分享到：</a></p>
+      <p class="left"><a href="#">京ICP备11010962号</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">京公网安备110105003042</a></p>
+      <div class="code_info">
+        <div class="info">
+          <p class="margin_top_20">&nbsp;&nbsp;扫描二维码</p>
+          <p>关注腾讯智慧</p>
+        </div>
+        <img src="2code.jpg" /></div>
+    </div>
+  </div>
+  <div class="footer_down">
+    <div id="copyright">Copyright © 1998 - 2013 Tencent. All Rights Reserved</div>
+  </div>
+</div>
+<script language="javascript">
+
+$(document).ready(function(e) {
+	var addContent = function(f,t){
+		var jsonUrl = "al.json"	
+		$.post(jsonUrl, function(json){		
+			if(!!json.rows){
+				var Data = json.rows;
+				for(i=f;i<t;i++){
+				 if(!Data[i]){
+				   break;
+			     }
+				 var ulContent = '<li><div class="info_img"><img src="'+Data[i].img+'" /></div><div class="info_content"><div class="content_top"><h2>'+Data[i].title+
+				 '</h2><p>'+Data[i].content+'</p></div><div class="content_bot"><p>'+Data[i].owner+'</p><p>'+Data[i].url+'</p><p>'+Data[i].id+'</p></div></div></li>'
+				 
+				 
+				 	
+				 $("#list ul").append(ulContent);
+				}
+			}
+		});		
+	}
+	
+	$(window).bind("scroll",function(){
+		if( $(document).scrollTop() + $(window).height() > $(document).height() - 20 ){			
+		var toId = parseInt($("#list").attr("data-id"));
+		addContent(toId,toId+3);
+		$("#list").attr("data-id",toId+3);
+		
+		}
+	});
+	addContent(0,3);		
+});
+
+</script>
+</body>
+</html>
