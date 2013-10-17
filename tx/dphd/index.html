@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=0.5" />-->
+<meta name="viewport" content="width=device-width,initial-scale=0.5" />
+<title>大屏互动</title>
+<script language="javascript" src="http://f2e.it/jq.js"></script>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-size: 62.5%;
+}
+#content {
+	background-image: url(img/back_bg.jpg);
+	margin: 0px auto;
+	width: 640px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -320px;
+}
+#ok {
+	width: 256px;
+	height: 174px;
+	background-image: url(img/ok.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -128px;
+	margin-top: 10em;
+}
+#content_text {
+	width: 356px;
+	height: 118px;
+	background-image: url(img/content_text.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -178px;
+	margin-top: 27em;
+}
+#back {
+	width: 344px;
+	height: 80px;
+	background-image: url(img/back.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -172px;
+	margin-top: 40em;
+}
+#back a {
+	width: 344px;
+	height: 80px;
+	display: block;
+}
+#top_title {
+	width: 640px;
+	height: 126px;
+	background-image: url(img/top_title.png);
+}
+#shop {
+	width: 440px;
+	height: 188px;
+	background-image: url(img/shop.png);
+	margin: 0px 100px 0px 100px;
+}
+#btn {
+	width: 480px;
+	margin: 0px 80px 0px 80px;
+	padding-bottom: 10px;
+}
+#btn ul li {
+	list-style: none;
+}
+#btn ul li.data_title {
+	background-image: url(img/btn.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	width: 460px;
+	height: 50px;
+}
+#btn ul li.data_table_1 {
+	width: 470px;
+	height: 104px;
+}
+#btn ul li.data_table_1 a {
+	background-image: url(img/btn.png);
+	background-position: 0px -55px;
+	background-repeat: no-repeat;
+	width: 470px;
+	height: 104px;
+	display: block;
+}
+#btn ul li.data_table_2 {
+	height: 104px;
+	margin-top: 10px;
+}
+#btn ul li.data_table_2 a {
+	background-image: url(img/btn.png);
+	background-position: 0px -173px;
+	background-repeat: no-repeat;
+	width: 470px;
+	height: 104px;
+	display: block;
+}
+#btn ul li.data_table_3 {
+	width: 470px;
+	height: 104px;
+	margin-top: 10px;
+}
+#btn ul li.data_table_3 a {
+	background-image: url(img/btn.png);
+	background-position: 0px -289px;
+	background-repeat: no-repeat;
+	width: 470px;
+	height: 104px;
+	display: block;
+}
+#line {
+	width: 640px;
+	height: 10px;
+	background-image: url(img/line.png);
+}
+#video_box {
+	width: 550px;
+	margin: 16px 45px 10px 45px;
+}
+#video_box ul {
+	width: 550px;
+	height: 180px;
+	padding-bottom: 20px;
+}
+#video_box ul li {
+	width: 260px;
+	height: 170px;
+	background-color: #000;
+	list-style: none;
+	-webkit-box-shadow: 3px 3px 3px #CCCCCC;
+	-moz-box-shadow: 3px 3px 3px #333;
+	box-shadow: 3px 3px 3px #333;
+	border-radius: 8px;
+}
+#video_box ul li img {
+	-webkit-box-shadow: 3px 3px 3px #CCCCCC;
+	-moz-box-shadow: 3px 3px 3px #333;
+	box-shadow: 3px 3px 3px #333;
+	border-radius: 8px;
+}
+#video_box ul .video_left {
+	float: left;
+}
+#video_box ul .video_right {
+	float: right;
+}
+#video_box ul .video_text {
+	width: 260px;
+	height: 50px;
+	position: relative;
+	margin-top: -50px;
+	-webkit-box-shadow: 3px 3px 3px #CCCCCC;
+	-moz-box-shadow: 3px 3px 3px #333;
+	box-shadow: 3px 3px 3px #333;
+	border-radius: 0px 0px 8px 8px;
+	background-color: #fff;
+	-moz-opacity: 0.8;
+	opacity: .80;
+	filter: alpha(opacity=80);
+}
+#video_box ul .video_in {
+	width: 210px;
+	height: 30px;
+	padding-top: 10px;
+	padding-left: 30px;
+	margin-top: -46px;
+	position: relative;
+}
+#video_box ul .video_in span {
+	width: 26px;
+	height: 26px;
+	background-image: url(img/play.png);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+}
+#video_box ul .video_in p {
+	float: left;
+	font-size: 20px;
+	color: #0075bc;
+	padding-left: 4px;
+}
+#bg {
+display: none;
+position: absolute;
+top: 0%;
+left: 50%;
+margin-left: -320px;
+width: 640px;
+height: 100%;
+background-color: black;
+z-index: 100;
+-moz-opacity: 0.5;
+opacity: .50;
+filter: alpha(opacity=50);
+}
+
+#msg_win{ width:572px; height:100%; position:fixed; left:50%; margin-left:-286px; top:0px; background-image:url(img/msg_win_bg.png); background-repeat:no-repeat;z-index: 101; display:none;}
+#back{ width:344px; height:80px; background-image:url(img/back.png); background-repeat:no-repeat; position:absolute; left:50%; margin-left:-172px; margin-top:470px;}
+#back a{width:344px; height:80px; display:block;}
+</style>
+</head>
+
+<body>
+<div id="bg"></div>
+<div id="content">
+  <div id="top_title"></div>
+  <div id="shop"></div>
+  <div id="btn">
+    <ul>
+      <li class="data_title"></li>
+      <li class="data_table_1"><a href="javascript:;"></a></li>
+      <li class="data_table_2"><a href="javascript:;"></a></li>
+      <li class="data_table_3"><a href="javascript:;"></a></li>
+    </ul>
+  </div>
+  <div id="line"></div>
+  <div id="video_box">
+    <ul>
+      <li class="video_left"><a href="javascript:;" class="video_btn"><img src="img/pic_1.jpg" />
+        <div class="video_text"></div>
+        <div class="video_in"><span></span>
+          <p>点击播放TVC 1</p>
+        </div>
+        </a></li>
+      <li class="video_right"><a href="javascript:;" class="video_btn"><img src="img/pic_2.jpg" />
+        <div class="video_text"></div>
+        <div class="video_in"><span></span>
+          <p>点击播放TVC 2</p>
+        </div>
+        </a></li>
+    </ul>
+    <ul>
+      <li class="video_left"><a href="javascript:;" class="video_btn"><img src="img/pic_3.jpg" />
+        <div class="video_text"></div>
+        <div class="video_in"><span></span>
+          <p>点击播放TVC 3</p>
+        </div>
+        </a></li>
+      <li class="video_right"><a href="javascript:;" class="video_btn"><img src="img/pic_4.jpg" />
+        <div class="video_text"></div>
+        <div class="video_in"><span></span>
+          <p>点击播放TVC 4</p>
+        </div>
+        </a></li>
+    </ul>
+  </div>
+  
+
+  
+</div>
+<div id="msg_win"><div id="back"><a href="javascript:;"></a></div></div>
+
+<script language="javascript">
+
+$(document).ready(function(e) {
+	
+	
+	 $("#video_box").delegate('.video_btn','click',function(){
+		$("#bg").show();
+		$("#msg_win").animate({top:80,opacity: 'show',width:572,height:640,right:0},500);
+		$("#msg_win").addClass("hideSelf");
+		
+		setTimeout( 'if($("#msg_win").hasClass("hideSelf")){$("#msg_win").animate({top:0,opacity:"hide",width:572,height:640,right:0},200);$("#bg").hide();$("#msg_win").removeClass("hideSelf");}' ,3000);	
+		 
+	 });
+	 
+	 $("#msg_win a").unbind('click').bind('click',function(){
+		$("#msg_win").animate({top:0,opacity: 'hide',width:572,height:640,right:0},200);
+		 $("#bg").hide();
+		 $("#msg_win").removeClass("hideSelf");		 
+	 });
+	
+	
+});
+
+
+
+</script>
+
+  
+</body>
+</html>
