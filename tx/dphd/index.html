@@ -43,7 +43,7 @@ body {
 	margin-left: -178px;
 	margin-top: 27em;
 }
-#back {
+.back {
 	width: 344px;
 	height: 80px;
 	background-image: url(img/back.png);
@@ -53,7 +53,7 @@ body {
 	margin-left: -172px;
 	margin-top: 40em;
 }
-#back a {
+.back a {
 	width: 344px;
 	height: 80px;
 	display: block;
@@ -194,23 +194,88 @@ body {
 	padding-left: 4px;
 }
 #bg {
-display: none;
-position: absolute;
-top: 0%;
-left: 50%;
-margin-left: -320px;
-width: 640px;
-height: 100%;
-background-color: black;
-z-index: 100;
--moz-opacity: 0.5;
-opacity: .50;
-filter: alpha(opacity=50);
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	margin-left: -320px;
+	width: 640px;
+	height: 1142px;
+	background-color: black;
+	z-index: 100;
+	-moz-opacity: 0.5;
+	opacity: .50;
+	filter: alpha(opacity=50);
+}
+#msg_win {
+	width: 572px;
+	height: 100%;
+	position: fixed;
+	left: 50%;
+	margin-left: -286px;
+	top: 0px;
+	background-image: url(img/msg_win_bg.png);
+	background-repeat: no-repeat;
+	z-index: 101;
+	display: none;
+}
+.back {
+	width: 344px;
+	height: 80px;
+	background-image: url(img/back.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -172px;
+	margin-top: 480px;
+}
+.back a {
+	width: 344px;
+	height: 80px;
+	display: block;
+}
+#ok {
+	width: 256px;
+	height: 174px;
+	background-image: url(img/ok.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -128px;
+	margin-top: 70px;
+}
+#content_text {
+	width: 356px;
+	height: 118px;
+	background-image: url(img/content_text.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -178px;
+	margin-top: 300px;
 }
 
-#msg_win{ width:572px; height:100%; position:fixed; left:50%; margin-left:-286px; top:0px; background-image:url(img/msg_win_bg.png); background-repeat:no-repeat;z-index: 101; display:none;}
-#back{ width:344px; height:80px; background-image:url(img/back.png); background-repeat:no-repeat; position:absolute; left:50%; margin-left:-172px; margin-top:470px;}
-#back a{width:344px; height:80px; display:block;}
+#msg_win_re_login {
+	width: 572px;
+	height: 100%;
+	position: fixed;
+	left: 50%;
+	margin-left: -286px;
+	top: 0px;
+	background-image: url(img/msg_win_bg.png);
+	background-repeat: no-repeat;
+	z-index: 101;
+	display: none;
+}
+#msg_win_re_login .back{ margin-top:410px;}
+
+#re_login_msg{ background-image:url(img/re_login.png);	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -182px;
+	margin-top: 186px;
+	width: 364px;
+	height: 118px;}
 </style>
 </head>
 
@@ -258,11 +323,16 @@ filter: alpha(opacity=50);
         </a></li>
     </ul>
   </div>
-  
-
-  
 </div>
-<div id="msg_win"><div id="back"><a href="javascript:;"></a></div></div>
+<div id="msg_win">
+  <div id="ok"></div>
+  <div id="content_text"></div>
+  <div class="back"><a href="javascript:;"></a></div>
+</div>
+<div id="msg_win_re_login">
+  <div id="re_login_msg"></div>
+  <div class="back"><a href="javascript:;"></a></div>
+</div>
 
 <script language="javascript">
 
@@ -270,18 +340,19 @@ $(document).ready(function(e) {
 	
 	
 	 $("#video_box").delegate('.video_btn','click',function(){
+
+		 _h_timer = setTimeout( 'if($("#msg_win").hasClass("hideSelf")){$("#msg_win").animate({top:0,opacity:"hide",width:572,height:640,right:0},200);$("#bg").hide();$("#msg_win").removeClass("hideSelf");}' ,3000);	
 		$("#bg").show();
-		$("#msg_win").animate({top:80,opacity: 'show',width:572,height:640,right:0},500);
+		$("#msg_win").animate({top:80,opacity: 'show',width:572,right:0},500);
 		$("#msg_win").addClass("hideSelf");
-		
-		setTimeout( 'if($("#msg_win").hasClass("hideSelf")){$("#msg_win").animate({top:0,opacity:"hide",width:572,height:640,right:0},200);$("#bg").hide();$("#msg_win").removeClass("hideSelf");}' ,3000);	
-		 
 	 });
 	 
 	 $("#msg_win a").unbind('click').bind('click',function(){
-		$("#msg_win").animate({top:0,opacity: 'hide',width:572,height:640,right:0},200);
+		$("#msg_win").animate({top:0,opacity: 'hide',width:572,right:0},200);
 		 $("#bg").hide();
-		 $("#msg_win").removeClass("hideSelf");		 
+		 $("#msg_win").removeClass("hideSelf");	
+		 if(!!_h_timer)clearTimeout(_h_timer);
+ 
 	 });
 	
 	
@@ -290,7 +361,5 @@ $(document).ready(function(e) {
 
 
 </script>
-
-  
 </body>
 </html>
