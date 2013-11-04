@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style>
+.dis_list{ width:700px;}
+.dis_list_title{ width:700px; height:50px; background-color:#999;}
+.dis_list_info{ width:700px; background-color:#0F0; height:400px; display:none;}
+.dis_list_loading{ width:16px; height:16px; position:relative; background-image:url(loading.gif);}
+</style>
+
+</head>
+
+<body>
+<div class="dis_list">
+  <div class="dis_list_title" data-id="1"></div>
+  <div class="dis_list_info"><div class="dis_list_loading"></div> </div>
+</div>
+<div class="dis_list">
+  <div class="dis_list_title" data-id="2"> </div>
+  <div class="dis_list_info"> </div>
+</div>
+<script language="javascript" src="http://f2e.it/jq.js"></script> 
+<script language="javascript">
+
+
+$(document).ready(function(e) {
+    
+	$(".dis_list").delegate(".dis_list_title","click",function(){ 
+	
+     $(this).siblings(".dis_list_info").slideToggle();
+	 $M = $(this).siblings(".dis_list_info");
+	 
+	 if($(this).siblings(".dis_list_info").children(".dis_list_loading").length==1){
+
+			  $.post( "http://f2e.it/json/fq.json", function(json){
+					if(json.rows!=0){ console.log(json.data);$M.empty();}
+			  });		
+
+	 }
+	 
+	 else{ return true;}
+
+     });
+	
+	
+});
+
+</script>
+</body>
+</html>
