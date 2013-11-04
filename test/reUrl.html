@@ -3,13 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
+
+<style>
+*{ margin:0px; padding:0px;}
+a.un{ display:block; background-image:url(button.png); background-position:0px 0px; width:74px; height:32px;}
+a.make{display:block; background-image:url(button.png); background-position:-7px -407px; width:74px; height:32px;}
+a.down{display:block; background-image:url(button.png); background-position:-334px -848px; width:74px; height:32px;}
+#loading { display:none;}
+#loading a{ text-align:center; width:16px; height:16px; background-image:url(loading.gif); display:block;margin-left: 20px;
+margin-top: 6px;}
+
+</style>
+
 </head>
 
 <body>
-<ul><li>http://baidu.com</li><li>http://orz-i.com</li></ul>
 
 
-<a href="#">点我</a>
+<p id="loading"><a></a></p>
+<p id="btn"><a href="#" class="make"></a><a class="text">生成Excel</a></p>
 
 <script language="javascript" src="http://f2e.it/jq.js"></script>
 
@@ -18,15 +30,17 @@
 
 $(document).ready(function(e) {
     
-	
-	$("li").click(function(){
-		 var Url =$(this).text();
-		
-		$("a").attr("href",Url);
-		
-    
+	$("a.make").click(function(){
+		$("#btn").hide();
+		$("#loading").show();
+	    $(this).addClass("down").removeClass("make");
+	    $(".text").text("下载Excel");
 	});
-	
+
+
+   //post成功  $("#btn").show(); $("#loading").hide();
+
+   window.setTimeout(function() {$("#btn").show(); $("#loading").hide();}, 3000);	
 	
 });
 
