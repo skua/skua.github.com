@@ -35,7 +35,7 @@ $(document).ready(function(e) {
 	 
 	 if($(this).siblings(".dis_list_info").children(".dis_list_loading").length==1){
 
-			  $.post( "city.json", function(json){
+			  $.get( "city.json", function(json){
 					if(json.data!=0){ console.log(json.data);$M.empty();}
 			  });		
 
