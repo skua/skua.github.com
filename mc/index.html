@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul {
+	width: 800px;
+	height: 200px;
+}
+.boxs li {
+	width: 200px;
+	height: 200px;
+	list-style: none;
+	position:absolute;
+	float:left;
+}
+.boxs li.tobig {
+	width: 70px;
+	height: 70px;
+	z-index: 99
+}
+#box_id_1 {
+
+background-color: #0F3;
+z-index:11
+}
+#box_id_2 {
+border-bottom: 120px solid #169;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height: 0;
+width: 200px;
+z-index:22;
+left: 670px;
+}
+#box_id_3 {
+	background-color: #906;
+left: 950px;
+}
+#box_id_4 {
+	background-color: #0F3;
+	left: 1150px;
+}
+#box_id_5 {
+border-top: 80px solid transparent;
+border-left: 0px solid transparent;
+border-right: 120px solid #6c9;
+border-bottom: 80px solid transparent;
+height: 200px;
+width: 0px;
+z-index: 22;
+top: 320px;
+
+}
+#box_id_6 {
+	background-color: #FFF;
+	left: 670px;
+	z-index:33;
+	width:360px;
+	height:360px;
+	top:320px;
+}
+#box_id_7 {
+border-top: 80px solid transparent;
+border-left: 120px solid #c3e;
+border-right: 0px solid transparent;
+border-bottom: 80px solid transparent;
+height: 200px;
+width: 0px;
+left: 1030px;
+z-index: 22;
+top: 320px;
+	
+}
+#box_id_8 {
+	background-color: #909;
+		left: 1150px;
+}
+#box_id_9 {
+	background-color: #9F3;
+}
+#box_id_10 {
+border-top: 120px solid #6f9;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height: 0;
+width: 200px;
+margin-top: 80px;
+left: 670px;
+z-index: 22;
+}
+#box_id_11 {
+	background-color: #039;
+	left: 950px;
+}
+#box_id_12 {
+	background-color: #639;
+	left: 1150px;
+}
+#center {
+	margin: 200px auto;
+	width: 800px;
+}
+</style>
+</head>
+
+<body>
+<div id="center">
+  <ul id="top_box" class="boxs">
+    <li id="box_id_1"></li>
+    <li id="box_id_2"></li>
+    <li id="box_id_3"></li>
+    <li id="box_id_4"></li>
+  </ul>
+  <ul id="mid_box" class="boxs">
+    <li id="box_id_5"></li>
+    <li id="box_id_6"></li>
+    <li id="box_id_7"></li>
+    <li id="box_id_8"></li>
+  </ul>
+  <ul id="bot_box" class="boxs">
+    <li id="box_id_9"></li>
+    <li id="box_id_10"></li>
+    <li id="box_id_11"></li>
+    <li id="box_id_12"></li>
+  </ul>
+</div>
+<script language="javascript" src="http://f2e.it/jq.js"></script>
+<script language="javascript">
+
+$(document).ready(function(e) {
+	
+	
+	
+    
+	/*上*/
+	$("#box_id_2").animate({ borderLeftWidth:0,left:750, borderRightWidth:0,borderBottomWidth:200}, 2000 ,function(){});
+	/*中*/
+	$("#box_id_6").animate({ top:400,left:750,width:200,height:200}, 2000 ,function(){});	
+	/*左中*/
+	$("#box_id_5").animate({ top:400,borderTopWidth:0,borderBottomWidth:0,borderRightWidth:200}, 2000 ,function(){});	
+	/*右中*/
+	$("#box_id_7").animate({ top:400,borderTopWidth:0,borderBottomWidth:0,borderLeftWidth:200,left:950}, 2000 ,function(){});	
+	/*下*/
+	$("#box_id_10").animate({ borderTopWidth:200,borderLeftWidth:0,borderRightWidth:0,left:750,marginTop:0}, 2000 ,function(){});
+	
+	
+	
+	
+	
+});
+
+
+</script>
+</body>
+</html>
