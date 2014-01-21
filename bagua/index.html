@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>八了个卦！</title>
+</head>
+
+<body>
+<style>
+.bg_style_0
+{
+position: relative;
+left: 300px;
+top: 100px;
+
+-webkit-animation:bg_style_0_am 1s .2s ease both;
+-moz-animation:bg_style_0_am 1s .2s ease both;
+	
+}
+.bg_style_1
+{
+
+position: relative;
+left: 334px;
+top: 152px;
+-webkit-animation:bg_style_1_am 1s .2s ease both;
+-moz-animation:bg_style_1_am 1s .2s ease both;
+}
+.bg_style_2
+{
+position: relative;
+left: 280px;
+top: 280px;
+
+-webkit-animation:bg_style_2_am 1s .2s ease both;
+-moz-animation:bg_style_2_am 1s .2s ease both;
+}
+.bg_style_3
+{
+position: relative;
+left: 134px;
+top: 404px;
+
+-webkit-animation:bg_style_3_am 1s .2s ease both;
+-moz-animation:bg_style_3_am 1s .2s ease both;
+}
+.bg_style_4
+{
+position: relative;
+left: -102px;
+top: 452px;
+
+
+-webkit-animation:bg_style_4_am 1s .2s ease both;
+-moz-animation:bg_style_4_am 1s .2s ease both;
+}
+.bg_style_5
+{
+position: relative;
+left: -338px;
+top: 400px;
+
+
+-webkit-animation:bg_style_5_am 1s .2s ease both;
+-moz-animation:bg_style_5_am 1s .2s ease both;
+}
+.bg_style_6
+{
+position: relative;
+left: -484px;
+top: 282px;
+
+-webkit-animation:bg_style_6_am 1s .2s ease both;
+-moz-animation:bg_style_6_am 1s .2s ease both;
+}
+.bg_style_7
+{
+position: relative;
+left: -530px;
+top: 154px;
+
+-webkit-animation:bg_style_7_am 1s .2s ease both;
+-moz-animation:bg_style_7_am 1s .2s ease both;
+}
+
+@-webkit-keyframes bg_style_0_am{
+0%{opacity:0;
+-webkit-transform:translateX(0px)}
+100%{opacity:1;
+-webkit-transform: translate(50px,100px);
+transform: rotate(0deg);
+-ms-transform: rotate(0deg);		/* IE 9 */
+-webkit-transform: rotate(0deg);	/* Safari and Chrome */
+-o-transform: rotate(0deg);		/* Opera */
+-moz-transform: rotate(0deg);		/* Firefox */
+}
+}
+@-webkit-keyframes bg_style_1_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(45deg);
+-ms-transform: rotate(45deg);		/* IE 9 */
+-webkit-transform: rotate(45deg);	/* Safari and Chrome */
+-o-transform: rotate(45deg);		/* Opera */
+-moz-transform: rotate(45deg);		/* Firefox */
+}
+}
+@-webkit-keyframes bg_style_2_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(90deg);
+-ms-transform: rotate(90deg);		/* IE 9 */
+-webkit-transform: rotate(90deg);	/* Safari and Chrome */
+-o-transform: rotate(90deg);		/* Opera */
+-moz-transform: rotate(90deg);		/* Firefox */
+}
+}
+@-webkit-keyframes bg_style_3_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(135deg);
+-ms-transform: rotate(135deg);		/* IE 9 */
+-webkit-transform: rotate(135deg);	/* Safari and Chrome */
+-o-transform: rotate(135deg);		/* Opera */
+-moz-transform: rotate(135deg);		/* Firefox */}
+}
+@-webkit-keyframes bg_style_4_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(180deg);
+-ms-transform: rotate(180deg);		/* IE 9 */
+-webkit-transform: rotate(180deg);	/* Safari and Chrome */
+-o-transform: rotate(180deg);		/* Opera */
+-moz-transform: rotate(180deg);		/* Firefox */
+}
+}
+@-webkit-keyframes bg_style_5_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(225deg);
+-ms-transform: rotate(225deg);		/* IE 9 */
+-webkit-transform: rotate(225deg);	/* Safari and Chrome */
+-o-transform: rotate(225deg);		/* Opera */
+-moz-transform: rotate(225deg);		/* Firefox */
+}
+}
+@-webkit-keyframes bg_style_6_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(270deg);
+-ms-transform: rotate(270deg);		/* IE 9 */
+-webkit-transform: rotate(270deg);	/* Safari and Chrome */
+-o-transform: rotate(270deg);		/* Opera */
+-moz-transform: rotate(270deg);		/* Firefox */
+}
+}
+@-webkit-keyframes bg_style_7_am{
+0%{opacity:0;
+-webkit-transform:translateX(-20px)}
+100%{opacity:1;
+-webkit-transform:translateX(0);
+transform: rotate(315deg);
+-ms-transform: rotate(315deg);		/* IE 9 */
+-webkit-transform: rotate(315deg);	/* Safari and Chrome */
+-o-transform: rotate(315deg);		/* Opera */
+-moz-transform: rotate(315deg);		/* Firefox */
+}
+}
+
+
+</style>
+<div id="city"> </div>
+<div id="table"> </div>
+<script language="javascript" src="http://f2e.it/jq.js"></script> 
+<script language="javascript">
+
+$(document).ready(function(e) {
+	
+	
+	
+	var numbersArray = [] , max = 8;  
+  
+    for( var j=1; numbersArray.push(j++) < max;);
+    
+    numbers = numbersArray.sort(function(){ return Math.random() - 0.5}); 
+	
+	var EightDiagrams = {"rows":["乾","坤","震","巽","坎","离","艮","兑"],"pic":["1","2","3","8","6","5","4","7"]}	
+		
+	for(i=0;i<8;i++){
+
+		$("#city").append(EightDiagrams.rows[numbers[i]-1]);
+		var h = '<img src="'+EightDiagrams.pic[numbers[i]-1]+'.jpg" / class="bg_style_'+i+'">'
+		$("#table").append(h)
+
+	}	 
+	
+	
+	
+});
+
+</script>
+</body>
+</html>
