@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=640,maximum-scale=0.5,minimum-scale=0.5" />
+<title>Test demo</title>
+<!--[if lte IE 8]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Use jQuery for best compatibility with other CSS3 enabled browsers -->
+<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/flux.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/quo.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+        $(function(){
+            if(!flux.browser.supportsTransitions)
+                alert("Flux Slider requires a browser that supports CSS3 transitions");
+
+            window.f = new flux.slider('#slider', {
+                pagination: false,
+                controls: false,
+                transitions: ['explode', 'tiles3d', 'bars3d', 'cube', 'turn'],
+                autoplay: false
+            });
+
+            $('.transitions li').click(function(event){
+                event.preventDefault();
+				$("#menu").show();
+
+		        $("#menu_list").removeClass("hover_out");
+			    $("#menu_list").addClass("hover_in");
+				
+				
+				 window.f.showImage($(this).index() ,$(event.target).data('transition'))
+            });
+
+             
+			 
+        });
+    </script>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#menu {
+	width: 60px;
+	height: 60px;
+	/*background-color: #999;*/
+	position: fixed;
+	z-index: 999;
+	background-image: url(menu.png);
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	left: 12px;
+	top: 12px;
+}
+#menu_list {
+	width: 300px;
+	height: 100%;
+	left: -340px;
+	
+	background-color: #000;
+	position: fixed;
+	z-index: 999;
+	border-right: #000 1px solid;
+	-webkit-box-shadow: 4px 0px 14px #000;
+	-moz-box-shadow: 4px 0px 14px #000;
+	box-shadow: 4px 0px 14px #000;
+	border-radius: 0px 4px 0px 4px;
+	padding: 10px;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+
+
+
+
+#menu_list.hover_out {
+	 transition:All 0.6s ease-in-out;
+
+    -webkit-transition:All 0.6s ease-in-out;
+
+    -moz-transition:All 0.6s ease-in-out;
+
+    -o-transition:All 0.6s ease-in-out;
+
+transform: translate(340px,0px);
+-webkit-transform: translate(340px,0px);
+-moz-transform: translate(340px,0px);
+-o-transform: translate(340px,0px);
+-ms-transform: translate(340px,0px);
+}
+
+#menu_list.hover_in {
+	 transition:All 0.6s ease-in-out;
+
+    -webkit-transition:All 0.6s ease-in-out;
+
+    -moz-transition:All 0.6s ease-in-out;
+
+    -o-transition:All 0.6s ease-in-out;
+
+transform: translate(0px,0px);
+-webkit-transform: translate(0px,0px);
+-moz-transform: translate(0px,0px);
+-o-transform: translate(0px,0px);
+-ms-transform: translate(0px,0px);
+}
+#menu_list li {
+	height: 50px;
+	list-style: none;
+	padding: 6px 6px 14px 6px;
+	margin: 8px 0px 0px 0px;
+	border-bottom: #1B1818 1px solid;
+}
+#menu_list li a {
+	left: 90px;
+	color: #fff;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+#menu_list_1 span {
+	background-image: url(mangu_50.jpg);
+	width: 50px;
+	height: 50px;
+	display: block;
+	border: 1px solid #353232;
+}
+#menu_list_1 a {
+	display: block;
+	height: 80px;
+	position: relative;
+	top: -25px;
+	left: 60px;
+}
+#menu_list_2 span {
+	background-image: url(taiwan_50.jpg);
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+#menu_list_2 a {
+	display: block;
+	height: 50px;
+	position: relative;
+	top: -25px;
+	left: 60px;
+}
+#menu_list_3 span {
+	background-image: url(taiwan-gx_50.jpg);
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+#menu_list_3 a {
+	display: block;
+	height: 50px;
+	position: relative;
+	top: -25px;
+	left: 60px;
+}
+#menu_list_4 span {
+	background-image: url(tokyo_50.jpg);
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+#menu_list_4 a {
+	display: block;
+	height: 50px;
+	position: relative;
+	top: -25px;
+	left: 60px;
+}
+#menu_list_5 span {
+	background-image: url(weinisi_50.jpg);
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+#menu_list_5 a {
+	display: block;
+	height: 50px;
+	position: relative;
+	top: -25px;
+	left: 60px;
+}
+.container {
+	position: fixed;
+	left: 0px;
+}
+</style>
+</head>
+<body>
+<div id="menu"></div>
+<div id="menu_list">
+  <ul class="transitions">
+    <li id="menu_list_1" data-transition="explode"><span></span><a>曼谷</a></li>
+    <li id="menu_list_2" data-transition="tiles3d"><span></span><a>台湾远郊</a></li>
+    <li id="menu_list_3" data-transition="bars3d"><span></span><a>高雄</a></li>
+    <li id="menu_list_4" data-transition="cube"><span></span><a>东京</a></li>
+    <li id="menu_list_5" data-transition="turn"><span></span><a>威尼斯</a></li>
+  </ul>
+</div>
+<section class="container">
+  <div id="slider"> <img src="mangu.jpg" alt="" /> <img src="taiwan.jpg" alt="" /> <img src="taiwan-gx.jpg" alt="" /> <img src="tokyo.jpg" alt="" /> <img src="weinisi.jpg" alt="" /> </div>
+</section>
+<script language="javascript">
+   $(document).ready(function(e) {
+	   
+	   
+	   
+	  // var obj_start = document.getElementById("menu");
+   
+	  // obj_start.addEventListener('touchstart',function () {
+		  
+		  
+		  
+		  
+		  
+//	var obj_menu = document.getElementById("menu");
+//	
+//	obj_menu.addEventListener("touchend",function(event) {
+//		
+//	},false);
+//	
+//	
+//    obj_menu.addEventListener("touchstart",function(event){
+//		
+//		event.preventDefault();
+//							$("#menu").hide();
+//				
+//					$("#menu_list").removeClass("hover_in");
+//					$("#menu_list").addClass("hover_out");
+//					$("#menu_list").show();
+//		
+//	},false);
+	
+	  
+		  
+		  
+		  $("#menu").click(function(){
+					$("#menu").hide();
+				
+					$("#menu_list").removeClass("hover_in");
+					$("#menu_list").addClass("hover_out");
+					$("#menu_list").show();
+		}) ;
+		
+		  $(".container").click(function(){
+			
+					$("#menu").show();
+				  
+					$("#menu_list").removeClass("hover_out");
+					$("#menu_list").addClass("hover_in");
+
+		  });	
+		  
+		
+	
+	   
+	   
+    
+   });
+   
+   
+</script>
+</body>
+</html>
