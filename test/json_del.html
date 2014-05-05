@@ -6,7 +6,8 @@
 </head>
 
 <body>
-<a id="test">点击run</a>
+<a id="obj">点击run</a>
+<a id="ele">点击run</a>
 <script language="javascript" src="http://f2e.it/jq.js"></script>
 <script language="javascript">
 
@@ -14,12 +15,29 @@
 
 $(document).ready(function(e) {
 
-	  $("#test").click(function(){
+	  $("#obj").click(function(){
 		 var demo ={"a":"a1","b":"b1","c":"c1","d":"d1"};
 		 delete demo.a;  
          console.log(demo);
-	  
 	  });
+	  
+	  /*删除对象*/
+	  
+	  $("#ele").click(function(){
+			var computer = { //这个JSON数据由数组和对象结构组成
+			"cpu": ["intel","AMD"],
+			"harddisk": ["Western Digital","Seagate"],
+			"motherboard": ["ASUS","MSI"]
+			};
+			
+			computer.cpu.splice(0,1)
+            console.log(computer.cpu) 
+			
+	  });  
+	  
+	   /*删除元素*/ 
+	  
+	  
 
 });
 
@@ -29,7 +47,16 @@ $(document).ready(function(e) {
 
 
 </script>
- 
+<script type="text/javascript">
+  (function(){
+    try{
+      if(window.console && window.console.log){
+        console.log('         ;8911hh5555hh11s;                    ;S1irrrrrrrrrii:.\n        ;B@BBBBBBBBBBMM#@Ar,                 rB@MBMMMMM###@@@#9,.\n       .&@Xh1i;i;;;;iis11hs:                ;H@G551ssrrss1hh5SSr,\n       :MM1r;;r15551i:                      1@&1i,:;iirii:   ...\n       ;#@&ABBBBBHBB##H9i                   1@A8XABBBBBM#MHGs\n       .9BHG951sriirsh8##3,                 iB#B&83Sh1s11S8B@&i\n         ;rr;,.        iM@1:                 ,s1r;,..     ..S@&;.\n                      .3@Ahi                                8@Xs:\n                      S@HS1:                              .G@AS1,\n                      ,r1s:                                rh51:\n \n\n\n\n\n\n                              .           .\n                            ;&Hr.        ;HG:\n                           ,G@Ghi        .8@X:.\n                           s@H5s,         :MM5:\n                           S@&1;          ,&#9;.\n                           S@&s:          ,A#9r.\n                           s@#5,          i@B5r.\n                           .3@#S.        rB@8h;\n                             hH@M851sshS&#B85r.\n                              ,18ABBBBBH&951;\n                                 ,;rrssri;, \n\n');
+        console.log('Hi~ 欢迎来访，可以通过i@55u.me联系我');
+      }
+    }catch(e){}
+  })()
+</script> 
 
 </body>
 </html>
