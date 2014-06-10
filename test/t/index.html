@@ -119,6 +119,22 @@ $(document).ready(function() {
 							 //json  = $.parseJSON(json);
 							 console.log(json);
 							// if(json.ret==0){}
+							
+							 data = json.rows;
+							 
+							 
+							 for(i=0;i<data.length;i++){
+								 
+								 
+								
+								 
+								   $("#pic-980").append(' <img class="lazy" data-original="'+data[i].img+'" title="巨图测试">');
+								   $("img.lazy").lazyload();
+								 
+								 }
+							
+							
+							
 
 							 }	
 		 
