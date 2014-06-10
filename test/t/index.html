@@ -10,6 +10,7 @@
 
 <link rel="stylesheet/less" type="text/css" href="styles.less">
 <script language="javascript" src="http://f2e.it/jq.js"></script>
+<script  language="javascript" src="js/jquery.easing.1.3.js"></script>
 <script  language="javascript" src="js/jquery.lazyload.js"></script>
 
 
@@ -106,7 +107,7 @@
 $(document).ready(function() {
 	
 	$("img.lazy").lazyload({
-         effect : "fadeIn"
+         effect : "easeOutBounce"
     });
 	 
 	 
@@ -119,7 +120,7 @@ $(document).ready(function() {
 					data = json.rows;
 					 for(i=0;i<data.length;i++){
 						$("#pic-980").append(' <img class="lazy" data-original="'+data[i].img+'" title="巨图测试">');
-						$("img.lazy").lazyload();
+						$("img.lazy").lazyload({effect : "easeOutBounce"});
 					}
 				}	 
 		  });
