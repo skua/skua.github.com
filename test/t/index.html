@@ -94,7 +94,7 @@
 
 
 
-<div id="pic-980"><img class="lazy" data-original="c09_RTR2Z32J.jpg" title="巨图测试"><img class="lazy" data-original="c01_RTR2ZCRQ.jpg" title="巨图测试"><img class="lazy" data-original="c02_RTR2YUUT.jpg" title="巨图测试"><img class="lazy" data-original="c14_RTR2YYWS.jpg" title="巨图测试"><img class="lazy" data-original="c16_10615921.jpg" title="巨图测试"><img class="lazy" data-original="c21_22112871.jpg" title="巨图测试"><img class="lazy" data-original="c35_RTR2ZFH9.jpg" title="巨图测试"></div>
+<div id="pic-980"><img class="lazy" data-original="c09_RTR2Z32J.jpg" title="巨图测试"><img class="lazy" data-original="c01_RTR2ZCRQ.jpg" title="巨图测试"><img class="lazy" data-original="c02_RTR2YUUT.jpg" title="巨图测试"><img class="lazy" data-original="c14_RTR2YYWS.jpg" title="巨图测试"></div>
 <footer id="foot">
 <p>就不要人人网那样</p>
 <p>不需要的也打开</p>
@@ -115,6 +115,17 @@ $(document).ready(function() {
 	  $("img.lazy").lazyload({
          effect : "fadeIn"
      });
+	 
+	 var url ="js/t.json"
+	  $.post(url,question,function(json){
+						 if(!!json){
+							 json  = $.parseJSON(json);
+							 console.log(json);
+							// if(json.ret==0){}
+
+							 }	
+		 
+	});
 	
 });
 </script>   
