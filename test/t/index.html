@@ -1,0 +1,122 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>F2E.it简洁版</title>
+<!--<link rel="stylesheet" href="style.css" />-->
+<link rel="stylesheet" href="src/tip-violet/tip-violet.css" type="text/css" />
+
+<link rel="stylesheet/less" type="text/css" href="styles.less">
+<script language="javascript" src="http://f2e.it/jq.js"></script>
+<script  language="javascript" src="js/jquery.lazyload.js"></script>
+
+
+</head>
+
+<body>
+
+<header id="header">
+  <h1>F2E.IT</h1>
+</header>
+<div id="main">
+  <div id="double_col">
+  <div id="center">
+
+      <section class="center">
+        <h2>纠结于主框架用section还是div</h2>
+        <p>所以还是用div吧</p>
+        <article class="entry">于是去w3c找到了这么个note：
+        
+
+        <p>The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element's contents would be listed explicitly in the document's outline.<p>
+        <a href="http://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-section-element">link</a></article>
+      </section>
+
+
+      
+      <section class="center" >
+        
+        <h2>发现个事，属性启动draggable后文章无法简单的ctrl+c了哈</h2>
+        <p>所以还是用div吧</p>
+        <article class="entry">下面的是lazyload测试
+        <p><img src="540-100.jpg"></p>
+        
+        <p>就不要人人网那样</p>
+        <p>不需要的也打开</p>
+        <p>真讨厌啊</p>
+        <p>所以还是藏起来顺便lazyload吧</p>
+        
+        </article>
+        
+        
+      </section>
+      
+       <section class="center" draggable="true" >
+        
+        <h2>选中我复制我试试</h2>
+        <p>所以还是用div吧</p>
+        <article class="entry">下面的是lazyload测试
+        <p><img src="540-100.jpg"></p>
+        
+        <p>响应方案：<br>
+        screen and(min-width: 992px) and (max-width:1400px) <br>
+        screen and (min-width: 768px) and (max-width: 991px)<br>
+        screen and (min-width: 480px) and (max-width: 767px)<br>
+        handheld,only screen and (max-width:480px)<br></p>
+        
+        </article>
+        
+        
+      </section>
+
+    </div>
+    <!-- <article>我是缩进测试</article>  -->
+    
+    <aside id="right" draggable="true" title="I'm here!">
+      <article class="aside">欲练此功，必先吃饱<p>勿忘我，我也是sidebar！</p></article>
+    </aside>
+  </div>
+  <!--<aside id="left">-->
+    <nav id="left-nav"> 
+      <!--      字符集兼容啊，亲-->
+      <ul>
+        <li><span class="html">&lt;</span><a id="html" title="样式诚可贵 脚本价更高 若为结构故 两者皆可抛">Html</a><span class="html">&gt;</span></li>
+        <li><span class="css">&#123;</span><a id="css"  title="若把样式比西子，浓妆淡抹总相宜。 ">Css</a><span class="css">&#125;</span></li>
+        <li><span class="js">&#40;</span><a id="js" title="脚本为之，则难者亦易矣，脚本不为，则易者亦难矣。">JavaScript</a><span class="js">&#41;</span></li>
+      </ul>
+    </nav>
+ <!-- </aside>-->
+  
+  
+</div>
+
+
+
+<div id="pic-980"><img class="lazy" data-original="c09_RTR2Z32J.jpg" title="巨图测试"><img class="lazy" data-original="c01_RTR2ZCRQ.jpg" title="巨图测试"><img class="lazy" data-original="c02_RTR2YUUT.jpg" title="巨图测试"><img class="lazy" data-original="c14_RTR2YYWS.jpg" title="巨图测试"><img class="lazy" data-original="c16_10615921.jpg" title="巨图测试"><img class="lazy" data-original="c21_22112871.jpg" title="巨图测试"><img class="lazy" data-original="c35_RTR2ZFH9.jpg" title="巨图测试"></div>
+<footer id="foot">
+<p>就不要人人网那样</p>
+<p>不需要的也打开</p>
+<p>真讨厌啊</p>
+<p>所以还是藏起来顺便lazyload吧</p> 
+<P>美丽的大脚</P>
+<p>足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载足部加载</p>
+
+
+
+
+
+
+ <script type="text/javascript">
+
+$(document).ready(function() {
+	
+	$("img.lazy").lazyload();
+	
+});
+</script>   
+</footer>
+
+</body>
+</html>
