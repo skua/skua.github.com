@@ -105,41 +105,36 @@
 
 $(document).ready(function() {
 	
-	  $("img.lazy").lazyload({
+	$("img.lazy").lazyload({
          effect : "fadeIn"
-     });
+    });
 	 
 	 
 	 
 	 
-	 $("#click").click(function(){
-	  var url ="js/t.json"
-	  $.get(url,function(json){
-						 if(!!json){
-							 //json  = $.parseJSON(json);
-							 console.log(json);
-							// if(json.ret==0){}
-							
-							 data = json.rows;
-							 
-							 
-							 for(i=0;i<data.length;i++){
-								 
-								 
-								
-								 
-								   $("#pic-980").append(' <img class="lazy" data-original="'+data[i].img+'" title="巨图测试">');
-								   $("img.lazy").lazyload();
-								 
-								 }
-							
-							
-							
-
-							 }	
-		 
-	 });
+	$("#click").click(function(){
+		  var url ="js/t.json"
+		  $.get(url,function(json){
+				if(!!json){
+					data = json.rows;
+					 for(i=0;i<data.length;i++){
+						$("#pic-980").append(' <img class="lazy" data-original="'+data[i].img+'" title="巨图测试">');
+						$("img.lazy").lazyload();
+					}
+				}	 
+		  });
 	});
+	
+	    //首先给窗口绑定事件scroll
+	$(window).bind("scroll",function(){
+	
+	         if( $(document).scrollTop() + $(window).height() > $(document).height() - 200 ){
+			 
+			   $("#click").click();
+			 
+			 }
+	});
+	
 });
 </script>   
 </footer>
